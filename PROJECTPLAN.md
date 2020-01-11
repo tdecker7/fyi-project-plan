@@ -306,7 +306,7 @@ As mentioned above, using Kanban provides us flexibility with the order and time
 * Monitor Load Tests
 
 ## Week 8 - Go live - or Hotfixes as needed
-### - Go Live
+### Go Live
 * If succesful tests - go live
 * May need rest of week for hot fixes and retest
 
