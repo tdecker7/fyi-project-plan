@@ -53,7 +53,7 @@ All routes will **require** the header `X-API-KEY`, which is provided by the sig
   }
   ```
   * Query Parameter
-  `/v1/links?destinationLink="https://validSite.com"`
+  `/v1/links/:link_id?destinationLink="https://validSite.com"`
   * Response
   
     * HTTP_STATUS: `200 OK`
@@ -94,6 +94,8 @@ All routes will **require** the header `X-API-KEY`, which is provided by the sig
       "destinationLink": "link_to_update.com"
   }
   ```
+  * Query Parameters:
+    * `/v1/links/:link_id?destinationLink="validsite.com"`
   * Response
     * HTTP_STATUS: `200 OK`
     * JSON Body
