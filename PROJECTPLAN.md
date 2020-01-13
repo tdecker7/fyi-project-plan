@@ -151,8 +151,8 @@ Simply put the architecture will consist of several elements, working in tandem 
 ## Database
 The database will be relational. This will facilitate ensuring that a user who attempts to create a shortened link to the same destination will receive the same link as a response. There will be two minimal tables, at least at first. More may be added as needed during development. Those tables are as follows: 
 
-Users Table: `_id (primary_key), email, password_hash, tokens`
-Links Table: `_id (primary_key), user_id (foreign_key), destination_link, short_link`
+* Users Table: `_id (primary_key), email, password_hash, tokens`
+* Links Table: `_id (primary_key), user_id (foreign_key), destination_link, short_link`
 
 There is a possibility that we may need to store our metrics in a timeseries store. This will be a last resort for meeting our traffic metrics reporting needs. AWS offers a solution, [Timestream](https://aws.amazon.com/timestream/), that may fit this need. Otherwise, there may be some implementation work to handle our own. Time will be built into a discovery phase for this portion to accomodate this possibility. 
 
