@@ -154,7 +154,7 @@ The database will be relational. This will facilitate ensuring that a user who a
 * Users Table: `_id (primary_key), email, password_hash, tokens`
 * Links Table: `_id (primary_key), user_id (foreign_key), destination_link, short_link`
 
-There is a possibility that we may need to store our metrics in a timeseries store. This will be a last resort for meeting our traffic metrics reporting needs. AWS offers a solution, [Timestream](https://aws.amazon.com/timestream/), that may fit this need. Otherwise, there may be some implementation work to handle our own. Time will be built into a discovery phase for this portion to accomodate this possibility. 
+There is a possibility that we may need to store our metrics in a timeseries store. AWS offers a solution, [Timestream](https://aws.amazon.com/timestream/), that may fit this need. Otherwise, there may be some implementation work to handle our own. Time will be built into a discovery phase for this portion to accomodate this possibility. 
 
 ## CloudWatch
 CloudWatch should handle the aggregation of built-in and custom traffic metrics and aggregation. The custom metrics will most likely be the ones we send for per-link metrics. Otherwise, the aggregation logic should be handled within CloudWatch. 
