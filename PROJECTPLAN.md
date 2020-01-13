@@ -204,7 +204,7 @@ As mentioned above, using Kanban provides us flexibility with the order and time
 ## Week 2 - Setup for Speed and Scale
 ### Copy work from last week - setup multiple environments - 7.5 Hours (1 Day)
 * Build out development and production environments in AWS
-* Project Meeting
+* Project Meeting - 30 min
 * Setup `gitlab-ci.yml` to handle automation throughout `dev` and `master` branches
 
 ### Begin Building Logic and Features - 2 Days
@@ -218,7 +218,7 @@ As mentioned above, using Kanban provides us flexibility with the order and time
 ### Begin Encoding Algorithm Development - 15.5 Hours (2 Days)
 * Research base 10 to base 62 conversion algorithms
 * Consider unique seeding solution given load balancers and scale - could provide the same seed to two requests happening simultaneously
-* Project Meeting - 30 Mins
+* Project Meeting - 30 Min
 * Implementation
 * Unit tests written for encoding algorithm
 * deploy to dev and master
@@ -264,6 +264,7 @@ As mentioned above, using Kanban provides us flexibility with the order and time
 ## Week 5 - Finalize Redirect Service & Standup CloudWatch integrations
 ### Setup CloudWatch Integrations - 7.5 Hours (1 Day)
 * Research CloudWatch requirements for integrations
+* Project Meeting - 30 min
 * Implement into Redirect Service
 * Test custom metrics from Redirect Service 
 
@@ -283,6 +284,7 @@ As mentioned above, using Kanban provides us flexibility with the order and time
 ## Week 6  - Production Testing, Load Testing, and hotfixing
 ### Explore Load test options or build to suit - 15.5 Hours (2 Days)
 * Discover load test solution
+* Project Meeting - 30 min
 * Build out solution 
 * Begin load testing
 
@@ -294,13 +296,13 @@ As mentioned above, using Kanban provides us flexibility with the order and time
 
 ### Review Hotfixes & Plan - 7.5 Hours - 1 Day
 * Review Hotfixes
-* Project Meeting
+* Project Meeting - 30 min
 * Plan hotfixes and issues
 
 ## Week 7 - Hotfix & Begin Retests
 ### Hotfixes - 23.5 Hours (3 Days)
 * Patch software as needed
-* Project Meeting
+* Project Meeting - 30 min
 * Release hotfixes after confirmations, reviews, and successful builds and tests
 
 ### Load Tests again - 15.5 Hours (2 Days)
