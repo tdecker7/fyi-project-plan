@@ -52,8 +52,8 @@ All routes will **require** the header `X-API-KEY`, which is provided by the sig
       "destinationLink": "https://validsite.com"
   }
   ```
-  * Query Parameter
-  `/v1/links/:link_id?destinationLink="https://validSite.com"`
+  * Query Parameters
+    * `/v1/links/:link_id?destinationLink="https://validSite.com"`
   * Response
   
     * HTTP_STATUS: `200 OK`
@@ -67,7 +67,7 @@ All routes will **require** the header `X-API-KEY`, which is provided by the sig
     ```
 
 2. `GET`: Retrieves one or all of a customers generated links
-  * Query Parameter
+  * Query Parameters
     * `/v1/links/` --> Returns all
     * `/v1/links/:link_id` --> Returns one matching `link_id` if exists
   * Response
