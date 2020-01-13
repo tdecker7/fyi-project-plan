@@ -68,8 +68,8 @@ All routes will **require** the header `X-API-KEY`, which is provided by the sig
 
 2. `GET`: Retrieves one or all of a customers generated links
   * Query Parameter
-  `/v1/links/` -> Returns all
-  `/v1/links/{link_id}` -> Returns one matching `link_id` if exists
+    * `/v1/links/` --> Returns all
+    * `/v1/links/{link_id}` --> Returns one matching `link_id` if exists
   * Response
     * HTTP_STATUS: `200 OK`
     * JSON Body:
