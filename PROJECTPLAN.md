@@ -5,7 +5,7 @@
 This document serves to provide an estimation of the requirements, architecture, tools and methodologies used, and plan to create and ship a production-scale link shortening API, which includes a redirection service to route links coming into our domain to their appropriate end URL. 
 
 # Requirements
-This project has a set of requirements that must be met. The requirements, given by our stakeholders and expanded upon to meet any implicit needs are as follows:
+The requirements, given by our stakeholders and expanded upon to meet any implicit needs are as follows:
 
 1. Signup or API Token Service
 1. Shortening API
