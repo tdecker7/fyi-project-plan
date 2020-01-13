@@ -109,7 +109,8 @@ Base Route: `/v1/links`
     ```
 
 4. `DELETE`: Removes link matching `link_id`
-  `/v1/links/:link_id`
+  * Query Parameters: 
+    * `/v1/links/:link_id`
   * Response
     * HTTP_STATUS: `204 No Content`
 
