@@ -44,7 +44,7 @@ There will be a REST API that will shorten links and provide access to modify th
 
 ### Route and Methods
 All routes will **require** the header `X-API-KEY`, which is provided by the signup service and serves to identify each user
-`/links`
+`/v1/links`
 1. `POST`: create unique shortened links
   * JSON Body
   ```
@@ -53,7 +53,7 @@ All routes will **require** the header `X-API-KEY`, which is provided by the sig
   }
   ```
   * Query Parameter
-  `/links?destinationLink="https://validSite.com"`
+  `/v1/links?destinationLink="https://validSite.com"`
   * Response
   
     * HTTP_STATUS: `200 OK`
@@ -68,8 +68,8 @@ All routes will **require** the header `X-API-KEY`, which is provided by the sig
 
 2. `GET`: Retrieves one or all of a customers generated links
   * Query Parameter
-  `/links/` -> Returns all
-  `/links/{link_id}` -> Returns one matching `link_id` if exists
+  `/v1/links/` -> Returns all
+  `/v1/links/{link_id}` -> Returns one matching `link_id` if exists
   * Response
     * HTTP_STATUS: `200 OK`
     * JSON Body:
@@ -87,7 +87,7 @@ All routes will **require** the header `X-API-KEY`, which is provided by the sig
     ```
 
 3. `PUT`: Updates the link associated with the ID
-  `/links/{link_id}`
+  `/v1/links/{link_id}`
   * JSON Body
   ```
   {
@@ -107,12 +107,12 @@ All routes will **require** the header `X-API-KEY`, which is provided by the sig
     ```
 
 4. `DELETE`: Removes link matching `link_id`
-  `/links/{link_id}`
+  `/v1/links/{link_id}`
   * Response
     * HTTP_STATUS: `204 No Content`
 
 ## Redirect Service
-The redirect service will receive inbound requests with the given route format of `/{link_id}`. Note, this is not via the `/links` route. It is is the base route, and thus how the distinction is made. Inbound requests to this route will provide the `link_id`, which is the base62 format that can be converted to base10, and therefore provide the original link, uniquely, every time. 
+The redirect service will receive inbound requests with the given route format of `/{link_id}`. Note, this is not via the `/v1/links` route. It is is the base route, and thus how the distinction is made. Inbound requests to this route will provide the `link_id`, which is the base62 format that can be converted to base10, and therefore provide the original link, uniquely, every time. 
 
 Below is a Diagram depicting this flow from when the end user clicks a link.
 
@@ -140,7 +140,7 @@ Simply put the architecture will consist of several elements, working in tandem 
 
 ## API Gateway
 * Gateway should be configured to handle only `https` requests.
-* Gateway will be configured to route `/links` to the Links API and `/short_link_id` to the Redirect Service
+* Gateway will be configured to route `/v1/links` to the Links API and `/short_link_id` to the Redirect Service
 
 ## Lambdas
 * Links API - This can be configured with one gateway to hand `Any` method. Should be a simple set of a few lambdas
@@ -233,7 +233,7 @@ As mentioned above, using Kanban provides us flexibility with the order and time
 * Enjoy some rest and relaxation - try not to think too much about APIs and Algorithms that scale!
 
 ### Finalize `Create` Routes - 15.5 Hours (2 Days)
-* Setup API Gateway integrations for `/links` route - this should allow for little to no configuration for the rest of the routes
+* Setup API Gateway integrations for `/v1/links` route - this should allow for little to no configuration for the rest of the routes
 * Finalize `create` route
 * Project Meeting - 30 min
 * Finalize unit tests and integration tests and ensure passing in Gitlab
