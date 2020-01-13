@@ -89,7 +89,6 @@ Base Route: `/v1/links`
     ```
 
 3. `PUT`: Updates the link associated with the ID
-  `/v1/links/:link_id`
   * JSON Body
   ```
   {
