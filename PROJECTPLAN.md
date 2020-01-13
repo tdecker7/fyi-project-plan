@@ -36,7 +36,7 @@ Signup should be a self-service solution, where users can post email and passwor
 This API key will be used in the Header of any request, embedded as `X-API-KEY`. This will serve as authentication.
 
 ## Shortening API
-There will be a REST API with several methods. This API will ultimately shorten links and provide access to modify those as needed.
+There will be a REST API that will shorten links and provide access to modify those as needed.
 
 1. Unique links will be provided to each user. 
 1. If a user attempts to generate links more than once for a given URL, provide the same link twice. 
