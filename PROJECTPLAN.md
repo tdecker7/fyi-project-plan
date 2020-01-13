@@ -69,7 +69,7 @@ All routes will **require** the header `X-API-KEY`, which is provided by the sig
 2. `GET`: Retrieves one or all of a customers generated links
   * Query Parameter
     * `/v1/links/` --> Returns all
-    * `/v1/links/{link_id}` --> Returns one matching `link_id` if exists
+    * `/v1/links/:link_id` --> Returns one matching `link_id` if exists
   * Response
     * HTTP_STATUS: `200 OK`
     * JSON Body:
@@ -87,14 +87,13 @@ All routes will **require** the header `X-API-KEY`, which is provided by the sig
     ```
 
 3. `PUT`: Updates the link associated with the ID
-  `/v1/links/{link_id}`
+  `/v1/links/:link_id`
   * JSON Body
   ```
   {
       "destinationLink": "link_to_update.com"
   }
   ```
-  * Query Parameter may be provided
   * Response
     * HTTP_STATUS: `200 OK`
     * JSON Body
@@ -107,12 +106,12 @@ All routes will **require** the header `X-API-KEY`, which is provided by the sig
     ```
 
 4. `DELETE`: Removes link matching `link_id`
-  `/v1/links/{link_id}`
+  `/v1/links/:link_id`
   * Response
     * HTTP_STATUS: `204 No Content`
 
 ## Redirect Service
-The redirect service will receive inbound requests with the given route format of `/{link_id}`. Note, this is not via the `/v1/links` route. It is is the base route, and thus how the distinction is made. Inbound requests to this route will provide the `link_id`, which is the base62 format that can be converted to base10, and therefore provide the original link, uniquely, every time. 
+The redirect service will receive inbound requests with the given route format of `/:link_id`. Note, this is not via the `/v1/links` route. It is is the base route, and thus how the distinction is made. Inbound requests to this route will provide the `link_id`, which is the base62 format that can be converted to base10, and therefore provide the original link, uniquely, every time. 
 
 Below is a Diagram depicting this flow from when the end user clicks a link.
 
