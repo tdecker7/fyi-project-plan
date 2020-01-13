@@ -315,3 +315,7 @@ As mentioned above, using Kanban provides us flexibility with the order and time
 * If succesful tests - go live
 * May need rest of week for hot fixes and retest
 
+# Estimated Release Date
+  * Start Date: Jan 13th, 2020
+  * 8 week timeline
+  * Release Date: Friday, March 6th, 2020
