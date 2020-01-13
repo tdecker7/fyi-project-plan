@@ -141,7 +141,7 @@ Simply put the architecture will consist of several elements, working in tandem 
 
 ## API Gateway
 * Gateway should be configured to handle only `https` requests.
-* Gateway will be configured to route `/v1/links` to the Links API and `/short_link_id` to the Redirect Service
+* Gateway will be configured to route `/v1/links` to the Links API and `/:link_id` to the Redirect Service
 
 ## Lambdas
 * Links API - This can be configured with one gateway to hand `Any` method. Should be a simple set of a few lambdas
