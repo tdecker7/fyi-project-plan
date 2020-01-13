@@ -17,19 +17,21 @@ Signup should be a self-service solution, where users can post email and passwor
 
 ### Route
 `/signup`
-### JSON body
-```
-{
-    "email": "validemail@validdomain",
-    "password": "strong_password_of_course",
-}
-```
-### Response
-```
-{
-    "API_KEY": "3a4e6ba6-d542-454a-859e-7f93c5a176c5"
-}
-```
+  * JSON body
+    ```
+    {
+        "email": "validemail@validdomain",
+        "password": "strong_password_of_course",
+    }
+    ```
+  * Response
+    * HTTP Status: `200 OK`
+    * JSON Body
+    ```
+    {
+        "API_KEY": "3a4e6ba6-d542-454a-859e-7f93c5a176c5"
+    }
+    ```
 
 This API key will be used in the Header of any request, embedded as `X-API-KEY`. This will serve as authentication.
 
