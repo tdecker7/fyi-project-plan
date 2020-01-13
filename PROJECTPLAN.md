@@ -13,7 +13,7 @@ The requirements, both given by our stakeholders and expanded upon to meet any i
 1. Monitoring and Metrics Service
 
 ## Signup or API Token Service
-Signup should be a self-service solution, where users can post email and password and retrieve a token
+Signup should be a self-service solution, where users can post email and password and retrieve a token.
 
 ### Route
 `/signup`
