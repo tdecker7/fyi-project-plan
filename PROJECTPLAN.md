@@ -144,7 +144,7 @@ Simply put the architecture will consist of several elements, working in tandem 
 * Gateway will be configured to route `/v1/links` to the Links API and `/:link_id` to the Redirect Service
 
 ## Lambdas
-* Links API - This can be configured with one gateway to hand `Any` method. Should be a simple set of a few lambdas
+* Links API - This can be configured with one gateway to handle `Any` method. Should be a simple set of a few lambdas
 * Encoding Algorithm - after some research, there are [algorithms](https://medium.com/swlh/how-to-build-a-tiny-url-service-that-scales-to-billions-f6fb5ea22e8c) to map base 10 items to base 62 which given a 5 character string can provide upwards of 916 Million concurrent distinct links. If more are needed, another character can be added for exponentially more unique links.
 * Redirect Service - This service is essentially an API that integrates with the Encoding Algorithm to decode the unique link and respond to the API Gateway with a 201 Redirect and the location of where. Importantly, all metrics should be taken here, with the exception of potentially click totals, which can be logged at the gateway level; this decision should be made at time of implementation with the best information available.
 
