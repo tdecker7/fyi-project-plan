@@ -163,7 +163,7 @@ CloudWatch should handle the aggregation of built-in and custom traffic metrics 
 This section provides the list and reasoning of tools and methodologies to be used in this project. 
 
 ## Programming Language
-JavaScript using NodeJS will be used with this project. This is our team's speciality, and in the event that our team may scale later, this skill is widely available in the applicant pool. Additionally, this is a language supported natively by AWS Lambdas. 
+JavaScript and NodeJS will be used with this project. This is our team's speciality, and in the event that our team may scale later, this skill is widely available in the applicant pool. Additionally, this is a language supported natively by AWS Lambdas. 
 
 ## Respository & CI/CD Pipeline
 [Gitlab](https://docs.gitlab.com/) is our chosen cloud code repository. This is a skill our team has and is very versed in. Additionally, Gitlab provides out-of-the-box CI/CD pipelines and processes, as well as, a very quick to implement custom CI/CD process that will implement quickly with our chosen AWS Environment. This will allow us to submit merge requests, review the code, while automated testing and builds run, thereafter automatically building and deploying our code with only simple button presses. This may require a small amount of time to setup; however, the benefits will be seen later, as our process works more smoothly with the ability to track changes and builds more easily. Additionally, Gitlab comes out-of-the box with project management tools, issue tracking and will work with our chosen project methodology.
