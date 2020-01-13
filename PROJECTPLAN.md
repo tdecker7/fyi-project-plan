@@ -40,7 +40,7 @@ There will be a REST API that will shorten links and provide access to modify th
 
 1. Unique links will be provided to each user. 
 1. If a user attempts to generate links more than once for a given URL, provide the same link twice. 
-1. If two distinct users, A and B, attempt to generate a link to the same destination site, such as https://google.com, they will be given each unique links. 
+1. If two distinct users, A and B, attempt to generate a link to the same destination site, such as https://google.com, they will each be given unique links. 
 
 ### Route and Methods
 All routes will **require** the header `X-API-KEY`, which is provided by the signup service and serves to identify each user.
